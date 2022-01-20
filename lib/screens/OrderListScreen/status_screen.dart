@@ -15,8 +15,7 @@ class _StatusScreenState extends State<StatusScreen> {
   @override
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
-    Timestamp time;
-    DateTime date;
+
     String uid;
     return Scaffold(
       body: StreamBuilder(
@@ -142,9 +141,6 @@ class _StatusScreenState extends State<StatusScreen> {
                     ),
                     Column(
                       children: [
-                        // for (var i in statusData) Text(i.toString()),
-                        // for (var i in uidData) SelectableText(i.toString()),
-                        // for (var i in roomData) Text(i.toString()),
                         for (int i = 0;
                             i < snapshotStatus.data.documents.length;
                             i++)
@@ -180,13 +176,3 @@ class _StatusScreenState extends State<StatusScreen> {
     );
   }
 }
-// Table(
-                        //     border: TableBorder
-                        //         .all(), // Allows to add a border decoration around your table
-                        //     children: [
-                        //       TableRow(children: [
-                        //         Text('Year'),
-                        //         Text('Lang'),
-                        //         Text('Author'),
-                        //       ]),
-                        //     ]),
